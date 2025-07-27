@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+.custom-background{
+    background-image: url("../images/cmu.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:unset;
+}
+.student-list{
+    display: flex;
+    justify-content: start;
+    margin-right: 20px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+
+}
+.container{
+    margin-top: 25px;
+    margin-right: 25px;
+    width: 900px;
+    border: 1px solid black; 
+    border-radius: 50px;
+    height: 90px;
+    background-color: #012362;
+    font-weight: bold;
+     
+}
+.container ul li{
+    width: 215px;
+    float: right;
+    margin: 10px auto;
+    text-align: center;
+    list-style: none;
+    
+}
+.container ul li a{
+       text-decoration: none;
+       color: white;
+       font-size: 25px;
+}
+.container ul li a:hover{
+          color: black;
+}

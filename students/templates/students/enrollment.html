@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/enrollment.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="home">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'index' %}" class="btn btn-primary">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="box">
+            <h1>Enrollment</h1>
+            <p>Welcome to City of Malabon University! We're so excited to have you join our community and embark on this exciting educational journey together. We look forward to supporting you every step of the way!</p>
+            <div class="add">
+                <a href="{% url 'student_create' %}" class="btn btn-primary">Enroll Now!</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

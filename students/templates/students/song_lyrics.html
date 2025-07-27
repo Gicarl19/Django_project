@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/song_lyrics.css' %}">
+</head>
+<body>
+    <div>
+        <div class="box">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'index' %}">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="glass">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="{% url 'lyrics' %}">Swicy</a>
+                        </li>
+                        <br>
+                        <li>
+                            <a href="{% url 'lyrics1' %}">Line Without a Hook</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

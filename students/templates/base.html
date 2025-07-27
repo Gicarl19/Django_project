@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <style rel="stylesheets" href="styles/style.css"></style>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/cmu_icon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'style/base.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+ {% block head%} {% endblock%}  <!-- this is important for including additional css for parent child -->
+</head> 
+<body class="custom-background">
+    <nav>
+        <a href="{% url 'index' %}" class="btn btn-primary">Home</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+       {% if messages %}
+            {% for message in messages %}
+                toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-top-right",
+                    "timeOut": "3000"
+                };
+                toastr["{{ message.tags|default:'info' }}"]("{{ message|escapejs }}");
+            {% endfor %}
+        {% endif %}
+    </script>
+    
+</body>
+</html>
